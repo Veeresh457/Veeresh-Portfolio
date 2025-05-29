@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - My Portfolio</title>
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2 class="logo"><i class="fas fa-code"></i> My Portfolio</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="skills.html"><i class="fas fa-laptop-code"></i> Skills</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <p>&copy; 2025 Naga Jai Veeresh. All rights reserved.</p>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="projects-header">
+        <h1>My Projects</h1>
+        <p>Explore my technical projects that demonstrate my skills in web development, problem-solving, and innovative thinking.</p>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h3>Budget Finance Manager</h3>
+          <p>A comprehensive financial management application that helps users track expenses, create budgets, and visualize spending patterns. Built with React and Node.js.</p>
+          <div class="tech-stack">
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+          </div>
+          <a href="https://spendingpartner.ct.ws/" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p>A responsive, professionally designed portfolio showcasing my skills, projects, and certifications. Built with modern HTML5, CSS3, and JavaScript.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Bootstrap</span>
+          </div>
+          <a href="#" class="project-link disabled">
+            <i class="fas fa-external-link-alt"></i> Current Project
+          </a>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Project3(Comming Soon)</h3>
+          <p>Currently Projects are in Developing phase</p>
+          <div class="tech-stack">
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+          </div>
+          <a href="#" class="project-link">
+           <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+          </a>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Project-4(Comming Soon)</h3>processing
+          <p>Currently Projects are in Developing phase</p>
+                    <div class="tech-stack">
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // Simple animation for project cards when they come into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      projectCards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

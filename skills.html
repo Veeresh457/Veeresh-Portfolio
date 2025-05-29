@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills - My Portfolio</title>
+  <link rel="stylesheet" href="skills.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2 class="logo"><i class="fas fa-code"></i> My Portfolio</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="skills.html" class="active"><i class="fas fa-laptop-code"></i> Skills</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <p>&copy; 2025 Naga Jai Veeresh. All rights reserved.</p>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>My Skills</h1>
+      
+      <div class="skills-intro">
+        <p>I've developed a diverse skill set through academic study, personal projects, and continuous learning. 
+          Below you'll find a comprehensive overview of my technical capabilities.</p>
+      </div>
+      
+      <div class="skills-categories">
+        <!-- Frontend Development -->
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h2 class="category-title">Frontend Development</h2>
+          </div>
+          
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <h3>HTML</h3>
+              <p>Experienced in building semantic and responsive layouts.</p>
+              
+              <a href="https://html.com/" target="_blank" class="skill-link">Learn More</a>
+            </div>
+            
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <h3>CSS</h3>
+              <p>Proficient in modern design, Flexbox, Grid, and animations.</p>
+              
+              <a href="https://www.codecademy.com/learn/learn-css" target="_blank" class="skill-link">Learn More</a>
+            </div>
+            
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-js"></i>
+              </div>
+              <h3>JavaScript</h3>
+              <p>Strong knowledge of ES6, DOM manipulation, and modern frameworks.</p>
+
+              <a href="https://www.freecodecamp.org/news/full-javascript-course-for-beginners/" target="_blank" class="skill-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Backend & Languages -->
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h2 class="category-title">Backend & Languages</h2>
+          </div>
+          
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-python"></i>
+              </div>
+              <h3>Python</h3>
+              <p>Proficient in Python programming including data structures and algorithms.</p>
+              
+              <a href="https://www.learnpython.org/" target="_blank" class="skill-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tools & Technologies -->
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h2 class="category-title">Tools & Technologies</h2>
+          </div>
+          
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <h3>Git</h3>
+              <p>Proficient in version control and collaborative workflows.</p>
+             
+              <a href="https://git-scm.com/doc" target="_blank" class="skill-link">Learn More</a>
+            </div>
+          
+          </div>
+        </div>
+        
+        <!-- Soft Skills -->
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h2 class="category-title">Soft Skills</h2>
+          </div>
+          
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <h3>Communication</h3>
+              <p>Clear articulation of technical concepts to diverse audiences.</p>
+             
+            </div>
+              
+              
+            
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h3>Team Collaboration</h3>
+              <p>Experience working in agile development teams.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // Animation for skill cards when they come into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const skillCards = document.querySelectorAll('.skill-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      skillCards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

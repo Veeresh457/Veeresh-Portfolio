@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifications - My Portfolio</title>
+   <link rel="stylesheet" href="certifications.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h2 class="logo"><i class="fas fa-code"></i> My Portfolio</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="skills.html"><i class="fas fa-laptop-code"></i> Skills</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="certifications.html" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <p>&copy; 2025 Naga Jai Veeresh. All rights reserved.</p>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <h1>My Certifications</h1>
+      <div class="certifications-intro">
+        <p>I continuously enhance my technical skills through professional certifications and courses. Below are some of my most significant achievements.</p>
+      </div>
+      
+      <div class="cert-stats">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="stat-number">12+</div>
+          <div class="stat-text">Certifications Earned</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <div class="stat-number">300+</div>
+          <div class="stat-text">Hours of Training</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <div class="stat-number">5</div>
+          <div class="stat-text">Recognized Institutions</div>
+        </div>
+      </div>
+      
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="cert-title">
+              <h3>Python Essentials-1</h3>
+              <div class="cert-issuer">Cisco Learning Academy</div>
+            </div>
+          </div>
+          
+          <div class="cert-details">
+            <p>This certification validates foundational knowledge of Python programming, including data types, control structures, functions, and file operations.</p>
+            
+            <div class="cert-meta">
+              <div class="cert-date">Issued: 2025</div>
+              <div class="cert-id">ID: PCAP-31-03</div>
+            </div>
+          </div>
+          
+          <a href="Python Essentials-1.pdf" target="_blank" class="view-btn">
+            <i class="fas fa-eye"></i> View Certificate
+          </a>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="cert-title">
+              <h3>Oracle Certified Associate Foundations</h3>
+              <div class="cert-issuer">Oracle University</div>
+            </div>
+          </div>
+          
+          <div class="cert-details">
+            <p>Certification demonstrating foundational knowledge of database concepts, SQL fundamentals, and database administration principles.</p>
+            
+            <div class="cert-meta">
+              <div class="cert-date">Issued: 2025</div>
+              <div class="cert-id">ID: OCA-1Z0-006</div>
+            </div>
+          </div>
+          
+          <a href="Oracle Certificate.pdf" target="_blank" class="view-btn">
+            <i class="fas fa-eye"></i> View Certificate
+          </a>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fas fa-c"></i>
+            </div>
+            <div class="cert-title">
+              <h3>C Programming Basics: Flow Control</h3>
+              <div class="cert-issuer">LinkedIn Learning</div>
+            </div>
+          </div>
+          
+          <div class="cert-details">
+            <p>Mastery of C programming flow control concepts including conditionals, loops, and program logic structures.</p>
+            
+            <div class="cert-meta">
+              <div class="cert-date">Issued: 2024</div>
+              <div class="cert-id">ID: LL-C-FLOW-2024</div>
+            </div>
+          </div>
+          
+          <a href="C language certificate LinkedIn.pdf" target="_blank" class="view-btn">
+            <i class="fas fa-eye"></i> View Certificate
+          </a>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fab fa-js"></i>
+            </div>
+            <div class="cert-title">
+              <h3>JavaScript Algorithms and Data Structures</h3>
+              <div class="cert-issuer">freeCodeCamp</div>
+            </div>
+          </div>
+          
+          <div class="cert-details">
+            <p>Certification focused on JavaScript fundamentals including algorithms, data structures, and problem-solving techniques.</p>
+            
+            <div class="cert-meta">
+              <div class="cert-date">Issued: 2024</div>
+              <div class="cert-id">ID: FCC-JS-ALGO-2024</div>
+            </div>
+          </div>
+          
+          <a href="#" class="view-btn">
+            <i class="fas fa-eye"></i> View Certificate
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // Simple animation for certification cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const certCards = document.querySelectorAll('.cert-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      certCards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+      
+      // Stats counter animation
+      const stats = document.querySelectorAll('.stat-number');
+      stats.forEach(stat => {
+        const target = +stat.innerText.replace('+', '');
+        const duration = 2000;
+        const frameDuration = 1000 / 60;
+        const totalFrames = Math.round(duration / frameDuration);
+        let frame = 0;
+        
+        // If it's a range stat (with + sign)
+        if(stat.innerText.includes('+')) {
+          const countTo = target;
+          const counter = setInterval(() => {
+            frame++;
+            const progress = frame / totalFrames;
+            const current = Math.round(countTo * progress);
+            
+            if (parseInt(stat.innerText) !== countTo) {
+              stat.innerText = current + "+";
+            }
+            
+            if (frame === totalFrames) {
+              clearInterval(counter);
+            }
+          }, frameDuration);
+        } 
+        // Regular number stat
+        else {
+          const countTo = target;
+          const counter = setInterval(() => {
+            frame++;
+            const progress = frame / totalFrames;
+            const current = Math.round(countTo * progress);
+            
+            if (parseInt(stat.innerText) !== countTo) {
+              stat.innerText = current;
+            }
+            
+            if (frame === totalFrames) {
+              clearInterval(counter);
+            }
+          }, frameDuration);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - My Portfolio</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2 class="logo"><i class="fas fa-code"></i> My Portfolio</h2>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="skills.html"><i class="fas fa-laptop-code"></i> Skills</a></li>
+        <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <p>&copy; 2025 Naga Jai Veeresh. All rights reserved.</p>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Get In Touch</h1>
+      
+      <div class="contact-intro">
+        <p>Have a project in mind or want to discuss opportunities? Feel free to reach out through any of the channels below. I'm always open to new ideas and collaborations.</p>
+      </div>
+      
+      <div class="contact-methods">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p class="contact-info">veeresht862@gmail.com</p>
+          <a href="mailto:veeresht862@gmail.com" class="contact-link">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p class="contact-info">Connect professionally</p>
+          <a href="http://www.linkedin.com/in/naga-jai-veeresh-thondapu-96607b2bb" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin-in"></i> Connect
+          </a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub</h3>
+          <p class="contact-info">Explore my projects</p>
+          <a href="https://github.com/Veeresh457" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i> Visit Profile
+          </a>
+        </div>
+      </div>
+      
+    
+      
+    </main>
+  </div>
+  
+  <script>
+    // Simple form handling and animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // In a real application, you would send this data to a server
+        console.log('Form submitted:', { name, email, subject, message });
+        
+        // Show success message
+        alert(`Thank you ${name}! Your message has been sent successfully. I'll get back to you soon.`);
+        
+        // Reset form
+        form.reset();
+      });
+      
+      // Animate elements when they come into view
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.contact-card, .contact-form, .social-links');
+        
+        elements.forEach(el => {
+          const position = el.getBoundingClientRect();
+          
+          // If element is in viewport
+          if(position.top < window.innerHeight * 0.9) {
+            el.style.opacity = 1;
+            el.style.transform = 'translateY(0)';
+          }
+        });
+      };
+      
+      // Set initial state
+      const cards = document.querySelectorAll('.contact-card, .contact-form, .social-links');
+      cards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
+      
+      // Listen for scroll events
+      window.addEventListener('scroll', animateOnScroll);
+      
+      // Trigger on load
+      animateOnScroll();
+    });
+  </script>
+</body>
+</html>
